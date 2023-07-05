@@ -1,0 +1,4 @@
+2023-07-06 01:18:13,464 | train | INFO | Set Logger d:\study\competition\AIconnect\baseline\baseline\results\train\20230706_011813
+2023-07-06 01:18:13,574 | train | INFO | Load data, train:14000 val:6000
+2023-07-06 01:18:14,149 | train | INFO | Initiated early stopper, mode: max, best score: inf, patience: 10
+2023-07-06 01:18:14,149 | train | INFO | --Train 0/2

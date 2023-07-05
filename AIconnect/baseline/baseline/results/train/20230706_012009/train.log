@@ -1,0 +1,16 @@
+2023-07-06 01:20:09,628 | train | INFO | Set Logger d:\study\competition\AIconnect\baseline\baseline\results\train\20230706_012009
+2023-07-06 01:20:09,737 | train | INFO | Load data, train:14000 val:6000
+2023-07-06 01:20:10,377 | train | INFO | Initiated early stopper, mode: max, best score: inf, patience: 10
+2023-07-06 01:20:10,392 | train | INFO | --Train 0/2
+2023-07-06 01:20:22,895 | train | INFO | batch: 0/437 loss: 0.7182173132896423
+2023-07-06 01:22:49,419 | train | INFO | batch: 100/437 loss: 0.7180769443511963
+2023-07-06 01:25:09,136 | train | INFO | batch: 200/437 loss: 0.6749934554100037
+2023-07-06 01:27:21,911 | train | INFO | batch: 300/437 loss: 0.6789714097976685
+2023-07-06 01:29:16,448 | train | INFO | batch: 400/437 loss: 0.7194954752922058
+2023-07-06 01:29:56,524 | train | INFO | --Val 0/2
+2023-07-06 01:30:05,724 | train | INFO | batch: 0/187 loss: 0.7103878259658813
+2023-07-06 01:31:53,053 | train | INFO | batch: 100/187 loss: 0.6890478730201721
+2023-07-06 01:33:20,600 | train | INFO | Write row 0
+2023-07-06 01:33:21,592 | train | INFO | Early stopper, counter 0/10, best:0.4415106951871658 -> now:0.4415106951871658
+2023-07-06 01:33:21,592 | train | INFO | Set counter as 0
+2023-07-06 01:33:21,592 | train | INFO | Update best score as 0.4415106951871658

@@ -4,14 +4,14 @@ from tqdm import tqdm
 
 class Trainer():
     
-    def __init__(self, model, optimizer, loss, metrics, device, logger, amp, interval=100):
+    def __init__(self, model, optimizer, loss, metrics, device, logger, interval=100):
         self.model = model
         self.optimizer = optimizer
         self.loss = loss
         self.metrics = metrics
         self.device = device
         self.logger = logger
-        self.amp = amp
+        # self.amp = amp
         self.interval = interval
         
         # History
@@ -39,12 +39,12 @@ class Trainer():
             if mode == 'train':
                 self.optimizer.zero_grad()
                 
-                if self.amp is None:
-                    loss.backward()
+                # if self.amp is None:
+                    # loss.backward()
                 
-                else:
-                    with self.amp.scale_loss(loss, self.optimizer) as scaled_loss:
-                        scaled_loss.backward()
+                # else:
+                    # with self.amp.scale_loss(loss, self.optimizer) as scaled_loss:
+                        # scaled_loss.backward()
                     
                 self.optimizer.step()
             

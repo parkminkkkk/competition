@@ -11,7 +11,7 @@ class Recorder():
                 model: object,
                 optimizer: object,
                 scheduler: object,
-                amp: object,
+                # amp: object,
                 logger: logging.RootLogger=None):
         self.record_dir = record_dir
         self.plot_dir = os.path.join(record_dir, 'plots')
@@ -22,7 +22,7 @@ class Recorder():
         self.model = model
         self.optimizer = optimizer
         self.scheduler = scheduler
-        self.amp = amp
+        # self.amp = amp
         
         os.makedirs(self.plot_dir, exist_ok = True)
         

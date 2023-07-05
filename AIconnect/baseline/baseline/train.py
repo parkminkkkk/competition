@@ -128,9 +128,9 @@ if __name__ == '__main__':
                                 logger=logger)
 
     # AMP
-    if config['TRAINER']['amp'] == True:
-        from apex import amp
-        model, optimizer = amp.initialize(model, optimizer, opt_level='O1')
+    # if config['TRAINER']['amp'] == True:
+    #     from apex import amp
+    #     model, optimizer = amp.initialize(model, optimizer, opt_level='O1')
 
     
     # Trainer
@@ -140,7 +140,7 @@ if __name__ == '__main__':
                       metrics=metrics,
                       device=device,
                       logger=logger,
-                      amp=amp if config['TRAINER']['amp'] else None,
+                    #   amp=amp if config['TRAINER']['amp'] else None,
                       interval=config['LOGGER']['logging_interval'])
     
     '''
@@ -151,7 +151,7 @@ if __name__ == '__main__':
                         model=model,
                         optimizer=optimizer,
                         scheduler=None,
-                        amp=amp if config['TRAINER']['amp'] else None,
+                        # amp=amp if config['TRAINER']['amp'] else None,
                         logger=logger)
 
     # Save train config

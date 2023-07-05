@@ -1,45 +1,39 @@
 DIRECTORY:
   dataset: D:/study/_data/AIconnect/train
-
-TRAINER :
-  model: effnet 
+TRAINER:
+  model: effnet
   optimizer: adam
-  learning_rate: 5.0e-4
+  learning_rate: 0.0005
   loss: bce
   metric:
-    - accuracy
-    - f1macro
+  - accuracy
+  - f1macro
   n_epochs: 2
   early_stopping_target: val_accuracy
   early_stopping_patience: 10
   early_stopping_mode: max
-  amp: False
+  amp: false
   gpu: 0
   seed: 42
-
 MODEL:
   effnet:
     backbone: efficientnet_b0
     n_out: 1
-    is_sigmoid: True
-
+    is_sigmoid: true
 DATASET:
-  val_size : 0.3
-
+  val_size: 0.3
 DATALOADER:
   batch_size: 32
   num_workers: 1
-  shuffle: True
-  pin_memory: True
-  drop_last: True
-
+  shuffle: true
+  pin_memory: true
+  drop_last: true
 LOGGER:
-  debug : False
-  wandb: False
+  debug: false
+  wandb: false
   logging_interval: 100
   plot:
-    - loss
-    - accuracy
-    - f1macro
-    - elapsed_time
-
+  - loss
+  - accuracy
+  - f1macro
+  - elapsed_time

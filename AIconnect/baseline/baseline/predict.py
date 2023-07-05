@@ -19,8 +19,9 @@ predict_config = load_yaml(os.path.join(PROJECT_DIR, 'config', 'predict_config.y
 
 
 # Serial
-train_serial = predict_config['TRAIN']['train_serial']
+# train_serial = predict_config['TRAIN']['train_serial']
 kst = timezone(timedelta(hours=9))
+train_serial = datetime.now(tz=kst).strftime("%Y%m%d_%H%M%S")
 predict_timestamp = datetime.now(tz=kst).strftime("%Y%m%d_%H%M%S")
 predict_serial = train_serial + '_' + predict_timestamp
 
